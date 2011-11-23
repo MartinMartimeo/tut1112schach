@@ -11,16 +11,13 @@ import javax.swing.JButton;
  *
  * @author Severin <MartinMartimeo> Orth <martin@martimeo.de>
  */
-public class Field {
+public class Field extends JButton{
 
     private int iPosX;
     private int iPosY;
-    private JButton bButton;
 
-    public Field(int iPosX, int iPosY, JButton bButton) {
-        this.iPosX = iPosX;
-        this.iPosY = iPosY;
-        this.bButton = bButton;
+    public Field(int iPosX, int iPosY) {
+        super();
     }
 
     public int getPosX() {
@@ -31,14 +28,10 @@ public class Field {
         return iPosY;
     }
 
-    public void setText(String sText) {
-        bButton.setText(sText);
-    }
-
-    public JButton getButton() {
-        return bButton;
-    }
-
-
-
+	@Override
+	public String toString() {
+		return "Field{" + "iPosX=" + iPosX + ", iPosY=" + iPosY + '}';
+	}
+    
+    
 }
