@@ -28,6 +28,7 @@ public class MainWindow extends JFrame{
 		this.setMaximumSize(new Dimension(400,400));
 		this.setSize(400,400);
 		this.setResizable(false);
+		this.setLocation(10, 10);
 		this.setLayout(new GridLayout(8, 8));
 		for (int i = 0; i< 64; i++){
 			Field temp = new Field(i%8, i/8);
@@ -42,7 +43,5 @@ public class MainWindow extends JFrame{
 			this.fields[i/8][i%8] = temp;
 		}
 		this.setVisible(true);
-		
 	}
-	
 }
